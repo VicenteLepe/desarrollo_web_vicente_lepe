@@ -116,17 +116,11 @@ const buildPreviewPortada = (datos, tabla) => {
         fila.appendChild(tema);
 
         const fotos = document.createElement("td");
-        if (datos[i].fotos && datos[i].fotos.length > 0) {
-            datos[i].fotos.forEach(foto => {
-                const imagen = document.createElement("img");
-                imagen.src = foto;
-                imagen.style.width = "80px";
-                imagen.style.height = "80px";
-                imagen.style.objectFit = "cover";
-                imagen.style.marginRight = "5px";
-                fotos.appendChild(imagen);
-            });
-        }
+        const imagen = document.createElement("img");
+        imagen.src = datos[i].fotos[0];
+        imagen.style.width = "240px";
+        imagen.style.height = "160px";
+        fotos.appendChild(imagen);
         fila.appendChild(fotos);
 
         tabla.appendChild(fila);

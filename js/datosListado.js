@@ -119,16 +119,12 @@ const buildListadoAct = (datos, tabla) => {
         fila.appendChild(nombre);
 
         const fotos = document.createElement("td");
-        if (datos[i].fotos && datos[i].fotos.length > 0) {
-            datos[i].fotos.forEach(foto => {
-                const imagen = document.createElement("img");
-                imagen.src = foto;
-                imagen.style.width = "80px";
-                imagen.style.height = "80px";
-                imagen.style.objectFit = "cover";
-                imagen.style.marginRight = "5px";
-                fotos.appendChild(imagen);
-            });
+        for (let j = 0; j < datos[i].fotos.length; j++) {
+            const imagen = document.createElement("img");
+            imagen.src = datos[i].fotos[j];
+            imagen.style.width = "120px";
+            imagen.style.height = "80px";
+            fotos.appendChild(imagen);
         }
         fila.appendChild(fotos);
 
