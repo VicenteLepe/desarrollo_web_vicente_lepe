@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>agregar-actividad</title>
+        <link rel="stylesheet" type="text/css" href="../css/style.css"> 
+    </head>
+    <body>
+        <button type="button" id="volver">volver</button> <br>
+        <p class="titulo">Agregar Actividad</p>
+        <div class="container" >
+            <form id="agregar-actividad-form">
+                
+                <div class="container">
+                    <p>¿Dónde?</p>
+                    <div id="region-input">
+                        <label for="region">Región:</label><br>
+                        <select id="region" name="region" required>
+                            <option hidden disabled selected value> -- selecciona una opción -- </option>
+                        </select>
+                    </div><br>
+    
+                    <div id="comuna-input">
+                        <label for="comuna">Comuna:</label><br>
+                        <select id="comuna" name="comuna" required>
+                            <option hidden disabled selected value> -- selecciona una opción -- </option>
+                        </select>
+                    </div><br>
+
+                    <div id="sector-input">
+                        <label for="sector">Sector:</label><br>
+                        <textarea id="sector" name="sector" maxlength="100"></textarea>
+                    </div><br>
+                </div><br>
+
+                <div class="container">
+                    <p>¿Quién organiza?</p>
+                    <div id="nombre-input">
+                        <label for="nombre">Nombre:</label><br>
+                        <textarea id="nombre" name="nombre" maxlength="200" required></textarea>
+                    </div><br>
+
+                    <div id="email-input">
+                        <label for="email">Email:</label><br>
+                        <textarea id="email" name="email" maxlength="100" required></textarea>
+                    </div><br>
+
+                    <div id="numero-input">
+                        <label for="numero">Número de Celular:</label><br>
+                        <input type="tel" id="numero" name="numero" ></input>
+                    </div><br>
+
+
+                    <div id="contacto-input">
+                        <label for="contacto">Contactar por:</label><br>
+                        <select multiple id="contacto" name="contacto" required>
+                            <option hidden disabled selected value> -- selecciona una opción -- </option>
+                            <option value="whatsapp">Whatsapp</option>
+                            <option value="telegram">Telegram</option>
+                            <option value="twitter">X</option>
+                            <option value="instagram">Instagram</option>
+                            <option value="tiktok">TikTok</option>
+                            <option value="otra">Otra</option>
+                        </select>
+                    </div>
+                    <div id="user-input">
+                        <textarea id="user" name="user" minlength="4" maxlength="50"></textarea>
+                    </div><br>
+                </div><br>
+
+                <div class="container">
+                    <p>¿Cuándo y de qué se trata?</p>
+
+                    <div id="inicio-input">
+                        <label for="inicio">Inicio:</label><br>
+                        <input type="datetime-local" class="form-control datetimepicker-input" id="inicio" name="inicio" required></input>
+                    </div><br>
+                    
+                    <div id="termino-input">
+                        <label for="termino">Termino:</label><br>
+                        <input type="datetime-local" class="form-control datetimepicker-input" id="termino" name="termino" required></input>
+                    </div><br>
+
+                    <div id="descripcion-input">
+                        <label for="descripcion">Descripción:</label><br>
+                        <textarea id="descripcion" name="descripcion" cols="50" rows="10" maxlength="499"></textarea>
+                    </div><br>
+
+                    <div id="tema-input">
+                        <label for="tema">Tema:</label><br>
+                        <select multiple id="tema" name="tema" required>
+                            <option hidden disabled selected value> -- selecciona una opción -- </option>
+                            <option value="musica">Música</option>
+                            <option value="deporte">Deporte</option>
+                            <option value="ciencias">Ciencias</option>
+                            <option value="religion">Religión</option>
+                            <option value="politica">Política</option>
+                            <option value="tecnologia">Tecnología</option>
+                            <option value="juegos">Juegos</option>
+                            <option value="baile">Baile</option>
+                            <option value="comida">Comida</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div id="otro-input">
+                        <textarea id="otro" name="otro" minlength="3" maxlength="15"></textarea>
+                    </div><br>
+
+                    <div id="fotos-input">
+                        <label for="foto">Foto:</label><br>
+                        <input type="file" id="foto" name="foto" required> 
+                    </div>
+                    <div id="fotos-input2">
+                        <input type="file" id="foto2" name="foto2"> 
+                    </div>
+                    <div id="fotos-input3">
+                        <input type="file" id="foto3" name="foto3"> 
+                    </div>
+                    <div id="fotos-input4">
+                        <input type="file" id="foto4" name="foto4"> 
+                    </div>
+                    <div id="fotos-input5">
+                        <input type="file" id="foto5" name="foto5"> 
+                    </div>
+                    <button type="button" id="mas-fotos">Agregar otra foto</button>
+                </div><br>
+
+                <button type="button" id="envio">Agregar esta actividad</button>
+            </form>
+            <div style="display: none;" id="mensaje-final" >Hemos recibido su información, muchas gracias y suerte en su actividad</div>
+        </div>
+        <script lang="es" src="../js/validaciones.js"></script>
+        <script lang="es" src="../js/botones.js"></script>
+        <script lang="es" src="../js/regiones.js"></script>
+        <script lang="es" src="../js/formulario.js"></script>
+    </body>
+</html>
