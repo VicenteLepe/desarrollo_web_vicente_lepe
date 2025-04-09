@@ -14,7 +14,7 @@ const fake_data = [
         descripcion: "trekking por la cordillera",
         tema: ["Deporte"],
         otro: "",
-        fotos: [""]
+        fotos: ["../media/fotos/foto1.JPG", "../media/fotos/foto2.JPG"]
     },
     {
         id: "2",
@@ -31,7 +31,7 @@ const fake_data = [
         descripcion: "Pichanga de basket",
         tema: ["Deporte"],
         otro: "",
-        fotos: [""]
+        fotos: ["../media/fotos/foto3.JPG", "../media/fotos/foto4.JPG", "../media/fotos/foto5.JPG"]
     },
     {
         id: "3",
@@ -48,7 +48,7 @@ const fake_data = [
         descripcion: "una tocata piola",
         tema: ["Música"],
         otro: "",
-        fotos: [""]
+        fotos: ["../media/fotos/foto6.JPG"]
     },
     {
         id: "4",
@@ -65,7 +65,7 @@ const fake_data = [
         descripcion: "Torneo de pokemon tcg",
         tema: ["Juegos"],
         otro: "",
-        fotos: ["", ""]
+        fotos: ["../media/fotos/foto7.JPG"]
     },
     {
         id: "5",
@@ -82,9 +82,10 @@ const fake_data = [
         descripcion: "Completada bailable",
         tema: ["Comida","Baile"],
         otro: "",
-        fotos: [""]
+        fotos: ["../media/fotos/foto8.JPG", "../media/fotos/foto9.JPG", "../media/fotos/foto10.JPG"]
     }
 ];
+
 
 
 const url = window.location.href;
@@ -114,8 +115,8 @@ if (actividad) {
         imagen.src = foto;
         imagen.alt = "Imagen de la actividad";
         imagen.className = "actividad-imagen-lista";
-        imagen.style.width = "640px"
-        imagen.style.height = "480px"
+        imagen.style.width = "320px"
+        imagen.style.height = "240px"
         imagen.style.objectFit = "cover"
         imagenesContainer.appendChild(imagen);
     });
